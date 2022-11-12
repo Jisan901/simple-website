@@ -27,6 +27,18 @@ body{
 a{
     -webkit-tap-highlight-color: transparent;
 }
+h1{
+    font-size: 2rem;
+    font-family: Montserrat;
+    color: rgb(196,207,222);
+}
+p{
+    font-size: 1.05rem;
+    color: #C4CFDE;
+}
+.typewriter{
+    font-size: 1.7rem;
+}
 .color-basic{
     color: #ff014f;
 }
@@ -167,23 +179,25 @@ a{
     color: #ff014f;
 }
 .link-content .icons{
+        border-top: 1px solid rgba(255,255,255,0.2);
+}
+.link-content .icons , .icons-2{
     width: 100%;
     margin-top: 100px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.2);
     margin-bottom: 50px;
 }
-.link-content .icons span{
+.link-content .icons span,.mini, .icons-2 span{
     display: block;
     color: #C4CFDE;
     margin-bottom: 20px;
 }
-.link-content .icons ul{
+.link-content .icons ul, .icons-2 ul{
     display: flex;
     align-items: center;
     font-size: 0.8rem;
 }
-.link-content .icons ul li{
+.link-content .icons ul li, .icons-2 ul li{
     list-style: none;
     width: 55px;
     height: 55px;
@@ -195,20 +209,22 @@ a{
     align-items: center;
     transition: 0.5s;
 }
-.link-content .icons ul li:hover{
+.link-content .icons ul li:hover, .icons-2 ul li:hover{
     transform: translateY(-8px);
     background-image: linear-gradient(145deg, rgb(30,32,36) ,rgb(35,39,43));
 }
-.link-content .icons ul li a{
+.link-content .icons ul li a, .icons-2 ul li a{
     color: #C4CFDE;
     font-size: 2rem;
     text-decoration: none;
     height: 70%;
     width: 70%;
+    text-align: center;
+    webkit-user-select: none;
 }
-.link-content .icons ul li a ion-icon{
-    width: 100%;
+.link-content .icons ul li a ion-icon, .icons ul li a ion-icon{
     height: 100%;
+    width: 100%;
 }
 
 
@@ -225,7 +241,7 @@ a{
     justify-content: center;
     flex-direction: column;
     padding: 100px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     width: 100%;
 }
 .main .header img{
@@ -237,4 +253,28 @@ a{
 }
 .main .header .content{
     width: 90%;
+    margin-top: 5%;
+}
+
+.main .header .content p,.main .header .content h1,.main .header .content > span{
+    margin-top: 15px;
+}
+
+.main .header .content .sector{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.icons-2{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.icons-2 ul li{
+    background-image: linear-gradient(145deg, rgb(30,32,36) ,rgb(35,39,43));
+    box-shadow: -5px -5px 10px 1px rgba(128,128,128,0.064);
+}
+.icons-2 ul li:hover{
+    background-image: linear-gradient(-145deg, rgb(30,32,36) ,rgb(35,39,43));
 }
