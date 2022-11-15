@@ -48,6 +48,15 @@ p{
     font-size: 1.05rem;
     color: #C4CFDE;
 }
+.color-fb{
+    color: #0095ba;
+}
+.color-in{
+    color: #08225a;
+}
+.color-ins{
+    color: #f1a988;
+}
 .none{
     display: none!important;
 }
