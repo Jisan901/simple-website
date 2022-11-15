@@ -91,6 +91,11 @@ p{
 .navigation .logo-ico{
     justify-content: flex-start;
 }
+.navigation .logo-ico img{
+    height: 50px!important;
+    width: 55px;
+    border-radius: 50%;
+}
 .navigation .humburger{
     justify-content: flex-end;
 }
@@ -815,7 +820,7 @@ footer p{
 }
 @media screen and (min-width:993px) and (max-width:1200px){
     .common-sec{
-        width: 68%;
+        width: 70%;
     }
     p{
         font-size: 1rem;
@@ -854,6 +859,7 @@ footer p{
     .main .header{
         display: flex;
         flex-direction: row-reverse;
+        width: 80%;
     }
     .main .header img{
         width: 50%;
