@@ -48,6 +48,14 @@ p{
     font-size: 1.05rem;
     color: #C4CFDE;
 }
+.active{
+    color: #ff014f!important;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.02);
+}
+.activate{
+    background-color: #ff014f!important;
+}
 .typewriter{
     font-size: 1.7rem;
 }
@@ -215,6 +223,7 @@ p{
     width: 55px;
     height: 55px;
     margin-right: 8%;
+    line-height: 55px;
     border-radius: 8%;
     background-color: rgba(255,255,255,0.03);
     display: flex;
@@ -235,11 +244,14 @@ p{
     text-align: center;
     webkit-user-select: none;
 }
-.link-content .icons ul li a ion-icon, .icons ul li a ion-icon{
+.link-content .icons ul li a ion-icon, .icons-2 ul li a ion-icon{
     height: 100%;
     width: 100%;
 }
-
+.color-gray{
+    color: lightgray!important;
+    font-size: 0.9rem;
+}
 
 /*------------------------
         main tag
@@ -329,7 +341,6 @@ p{
 }
 .feature .cards,.portfolio .cards{
     display: grid;
-    grid-template-rows: repeat(6,1fr);
     grid-template-columns: repeat(1,1fr);
     justify-items: center;
     width: 100%;
@@ -399,7 +410,7 @@ p{
 .portfolio .cards .card:hover h3 .hidden ion-icon{
     height: 20px;
 }
-.resume .resume-nav{
+.resume .resume-nav,.common.resume-nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -411,7 +422,7 @@ p{
     border-radius: 10px;
     margin-bottom: 40px;
 }
-.resume .resume-nav .link{
+.resume .resume-nav .link, .common.resume-nav .link{
     width: 100%;
     height: 25%;
     text-align: center;
@@ -423,7 +434,7 @@ p{
     transition: 0.5s;
     user-select: none;
 }
-.resume .resume-nav .link:hover{
+.resume .resume-nav .link:hover,.common.resume-nav .link:hover{
     color: #ff014f;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
     -5px -5px 5px 5px rgba(255,255,255,0.02);
@@ -478,7 +489,7 @@ p{
 .resume .timelines .timeline div span:first-child{
     font-size: 0.85rem;
 }
-.testimonial .card{
+.testimonial .card , .card-cv{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,27 +499,268 @@ p{
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
     -5px -5px 5px 5px rgba(255,255,255,0.02);
     background-image: linear-gradient(-145deg, rgb(30,32,36) ,rgb(35,39,43));
+    margin-bottom: 20px;
 }
-.testimonial .card img{
+.testimonial .card img ,.card-cv img{
     transition: 0.5s;
+    width: 100%;
 }
-.testimonial .card:hover img{
+.testimonial .card:hover img,.card-cv:hover img{
     transform: scale(1.1);
 }
-.testimonial .card .divider{
+.testimonial .card .divider,.card-cv .divider{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.testimonial .card .divider:first-child{
+.testimonial .card .divider:first-child,.card-cv .divider:first-child{
     overflow: hidden;
     align-items: center;
     border-radius: 8px;
 }
-.testimonial .card .divider:last-child span:last-child{
+.testimonial .card .divider:last-child span:last-child,.testimonial .card .crd-head .text span, .card-cv .divider:last-child span, .card-cv .crd-head .text span{
     color: #C4CFDE;
+}
+.testimonial .card .crd-head,.card-cv .crd-head{
+    width: 100%;
+}
+.testimonial .card .crd-head .text ,.card-cv .crd-head .text {
+    width: 100%;
+}
+.testimonial .card .crd-head .text span,.card-cv .crd-head .text span{
+    font-size: 0.9rem;
+    display: block;
 }
 .testimonial .card .divider:last-child *{
     margin: 10px 0;
+}
+.testimonial .card.crd-2> *,.card-cv> *,.testimonial .card .crd-head .text > *,.card-cv .crd-head .text > *{
+    margin: 10px 0;
+}
+.testimonial .card .crd-head {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+.testimonial .card .crd-head .stars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: gold;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+    width: 125px;
+    height: 30px;
+    padding: 0 5px;
+}
+.testimonial .card .crd-head .stars .star{
+    font-size: 14px;
+}
+.testimonial .balls{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 0 0;
+}
+.testimonial .balls div{
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 50%;
+    margin: 0 10px;
+    box-shadow: 1px 1px 4px 2px #000 inset, 2px 2px 4px 2px rgba(255,255,255,0.05);
+    transition: 0.5s;
+}
+.testimonial .balls div:hover{
+    background-color: #ff014f;
+}
+
+.clients .cards{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+}
+.clients .cards .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+    background-image: linear-gradient(-145deg, rgb(30,32,36) ,rgb(35,39,43));
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.clients .cards .card:hover{
+        background-image: linear-gradient(145deg, rgb(30,32,36) ,rgb(35,39,43));
+}
+.clients .cards .card .img{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clients .cards .card .img img{
+    width: 80%;
+    padding: 20px;
+}
+.clients .cards .card a{
+    text-decoration: none;
+    color: lightgray;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.clients .cards .card:hover a{
+    color: #ff014f;
+}
+.pricing .p-card0{
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+}
+.pricing .p-card0 .p-card{
+    padding: 15px;
+}
+.pricing .p-card0 .p-card .cost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.pricing .p-card0 .p-card .cost *{
+    margin: 10px 0;
+}
+.pricing .p-card0 .p-card .cost .color-basic{
+box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+    padding: 5px 7px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+}
+.pricing .p-card0 .p-card .cost .text span{
+    color: gray;
+}
+.pricing .p-card0 .p-card .quality{
+    display: flex;
+    flex-direction: column;
+}
+.pricing .p-card0 .p-card > a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+    border-radius: 2px;
+    padding: 5px 0;
+}
+.pricing .p-card0 .p-card > p{
+    color: gray;
+    font-size: 1rem;
+}
+.pricing .p-card0 .p-card .quality p{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 1.05rem;
+}
+.pricing .p-card0 .p-card .ico{
+    display: flex;
+    flex-direction: column;
+}
+.pricing .p-card0 .p-card .ico span{
+    font-size: 0.9rem;
+    color: lightgray;
+    margin-top: 10px;
+}
+.contact .cards{
+    width: 100%;
+}
+.contact .cards form{
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+}
+.contact .cards form *{
+    width: 90%;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+.contact .cards form label{
+    margin-top: 20px;
+    color: lightgray;
+    font-size: 14px;
+}
+.contact .cards form input{
+    background: rgb(25,27,30);
+    border: 2px solid rgb(25,27,30);
+    border-radius: 8px;
+    padding: 0 15px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.3) inset, -2px -2px 4px 2px rgba(255,255,255,0.05) inset;
+    height: 55px;
+    color: #fff;
+    outline: none;
+}
+.contact .cards form textarea:focus ,.contact form input:focus{
+    border-color: rgb(139,14,54);
+}
+.contact .cards form textarea{
+    background: rgb(25,27,30);
+    border: 2px solid rgb(25,27,30);
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.3) inset, -2px -2px 4px 2px rgba(255,255,255,0.05) inset;
+    height: 200px;
+    color: #fff;
+    outline: none;
+}
+.contact .cards form button{
+    margin-top: 30px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px 5px rgba(255,255,255,0.04);
+    background-image: linear-gradient(145deg, rgb(30,32,36) ,rgb(35,39,43));
+    height: 55px;
+    border-radius: 8px;
+    transition: 0.5s;
+    color: #ff014f;
+    font-weight: bold;
+}
+.contact .cards form button:hover{      
+    background-image: linear-gradient(-145deg, rgb(30,32,36) ,rgb(35,39,43));
+    height: 53px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer p{
+    margin: 20px 0;
+    text-align: center;
 }
