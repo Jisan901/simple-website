@@ -267,7 +267,6 @@ p{
     flex-direction: column;
     padding: 100px 0;
     border-bottom: 1px solid rgba(0,0,0,0.5);
-    width: 90%;
     margin: 0 auto;
 }
 .main .header img{
@@ -763,4 +762,87 @@ footer{
 footer p{
     margin: 20px 0;
     text-align: center;
+}
+
+
+
+
+
+/* responsive */
+
+
+@media screen and (min-width:577px) and (max-width:768px){
+    .common-sec{
+        width: 80%;
+    }
+}
+@media screen and (min-width:577px){
+    .clients .cards{
+    justify-content: space-between;
+    grid-template-columns: repeat(3,1fr);
+    }
+    .testimonial .card-row{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .testimonial .card-row .divider:first-child{
+        margin-right: 20px;
+    }
+    .feature .cards .card,.portfolio .cards .card{
+        width: 70%;
+    }
+    .feature .cards,.portfolio .cards{
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    }
+}
+@media screen and (min-width:769px) and (max-width:992px){
+    .common-sec{
+        width: 75%;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .resume .resume-nav,.common.resume-nav{
+        flex-direction: row;
+    }
+    .main .header .content .sector{
+        flex-direction: row;
+    }
+}
+@media screen and (min-width:993px) and (max-width:1200px){
+    .common-sec{
+        width: 68%;
+    }
+    p{
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    .resume .resume-nav,.common.resume-nav{
+        flex-direction: row;
+    }
+    .main .header .content .sector{
+        flex-direction: row;
+    }
+
+}
+@media screen and (min-width:1201px) and (max-width:1400px){
+    .common-sec{
+        width: 65%;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .resume .resume-nav,.common.resume-nav{
+        flex-direction: row;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    .main .header .content .sector{
+        flex-direction: row;
+    }
+
 }
