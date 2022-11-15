@@ -827,7 +827,7 @@ footer p{
         flex-direction: row;
     }
 }
-@media screen and (min-width:993px) and {
+@media screen and (min-width:993px) {
     .common-sec{
         width: 70%;
     }
