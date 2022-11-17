@@ -91,6 +91,7 @@
             </div>
         </section>
         <section id="feature" class="feature common-sec">
+        <div id="particles-js2"></div>
             <div class="alt-heading">
                 <span class="color-basic">FEATURES</span>
                 <h1>What I Do</h1>
@@ -730,6 +731,7 @@
             </div>
         </section>
         <section id="contact" class="contact common-sec">
+            <div id="particles-js3"></div>
             <div class="alt-heading">
                 <span class="color-basic">CONTACT</span>
                 <h1>Contact With Me</h1>
@@ -841,9 +843,7 @@
             $('#c-link1').show();
             $('#box1').show();
             $('#ball1').show();
-      
-      window.onload=()=>{
-          particlesJS("particles-js",{
+      var jsoncf = {
   "particles": {
     "number": {
       "value": 80,
@@ -853,7 +853,7 @@
       }
     },
     "color": {
-      "value": ["#f0f","#fff","#000","#ff014f"]
+      "value": ["#f0f","#fff","#000","#ff014f","#ff0","#3cd6aa"]
     },
     "shape": {
       "type": "circle",
@@ -916,7 +916,7 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
+        "enable": true,
         "mode": "repulse"
       },
       "onclick": {
@@ -952,7 +952,11 @@
     }
   },
   "retina_detect": true
-},()=>{ console.log('initially');});
+}
+      window.onload=()=>{
+          particlesJS("particles-js",jsoncf,()=>{ console.log('initially');});
+          particlesJS("particles-js2",jsoncf,()=>{ console.log('initially');});
+          particlesJS("particles-js3",jsoncf,()=>{ console.log('initially');});
       }
       
   </script>

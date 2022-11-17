@@ -287,7 +287,7 @@ p{
     margin: 0 auto;
     position: relative;
 }
-.main .header #particles-js{
+.main .header #particles-js,#particles-js3,#particles-js2{
     position: absolute;
     top: 0;
     left: 0;
@@ -335,11 +335,13 @@ p{
         cards feature
   ------------------------*/
   
-.feature , .common-sec{
+.feature ,
+.common-sec{
     width: 90%;
     margin: 100px auto;
     border-bottom: 1px solid rgba(0,0,0,0.5);
     padding-bottom: 100px;
+    position: relative;
 }
 .alt-heading{
     display:flex;
@@ -523,7 +525,7 @@ p{
     border-radius: 5px;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05),
     -5px -5px 5px 5px rgba(255,255,255,0.02);
-    background-image: linear-gradient(-145deg, rgb(30,32,36) ,rgb(35,39,43));
+    background-image: linear-gradient(-145deg, rgba(30,32,36,0.2) ,rgba(35,39,43,0.2));
     margin-bottom: 20px;
 }
 .testimonial .card img ,.card-cv img{
